@@ -1,0 +1,5 @@
+name: creative
+version: '1.0'
+main: ru.sema1ary.creative.Creative
+api-version: '1.20'
+authors: [sema1ary]
