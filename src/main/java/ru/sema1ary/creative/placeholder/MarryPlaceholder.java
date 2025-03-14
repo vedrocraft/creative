@@ -8,7 +8,7 @@ import org.jetbrains.annotations.NotNull;
 public class MarryPlaceholder extends PlaceholderExpansion {
     @Override
     public @NotNull String getIdentifier() {
-        return "creative";
+        return "marry";
     }
 
     @Override
