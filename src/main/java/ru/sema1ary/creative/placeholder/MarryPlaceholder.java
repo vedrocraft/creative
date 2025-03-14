@@ -8,17 +8,17 @@ import org.jetbrains.annotations.NotNull;
 public class MarryPlaceholder extends PlaceholderExpansion {
     @Override
     public @NotNull String getIdentifier() {
-        return "";
+        return "creative";
     }
 
     @Override
     public @NotNull String getAuthor() {
-        return "";
+        return "sema1ary";
     }
 
     @Override
     public @NotNull String getVersion() {
-        return "";
+        return "1.0.0";
     }
 
     @Override
