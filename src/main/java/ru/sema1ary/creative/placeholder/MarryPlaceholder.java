@@ -30,7 +30,7 @@ public class MarryPlaceholder extends PlaceholderExpansion {
     public String onRequest(OfflinePlayer player, @NotNull String params) {
         String marryPlaceholder = PlaceholderAPI.setPlaceholders(player, "%marriagemaster_heart%");
         if(!marryPlaceholder.isEmpty()) {
-            return " " + marryPlaceholder;
+            return marryPlaceholder + " ";
         }
 
         return "";
