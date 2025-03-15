@@ -1,5 +1,6 @@
 package ru.sema1ary.creative.listener;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
 import org.bukkit.WorldBorder;
@@ -7,8 +8,8 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
+import ru.sema1ary.spawn.Spawn;
 import ru.sema1ary.spawn.service.SpawnService;
-import ru.sema1ary.vedrocraftapi.service.PluginServiceGetter;
 
 public class MoveListener implements Listener {
     @EventHandler
@@ -25,8 +26,9 @@ public class MoveListener implements Listener {
                 player.getLocation().getZ() < (center.getZ() - borderSize) ||
                 player.getLocation().getZ() > (center.getZ() + borderSize)) {
 
-            PluginServiceGetter.getServiceFromPlugin("spawn", SpawnService.class)
-                    .teleportToSpawn(player);
+            Spawn spawn = (Spawn) Bukkit.getPluginManager().getPlugin("spawn");
+            assert spawn != null;
+            spawn.getService(SpawnService.class).teleportToSpawn(player);
         }
     }
 }
