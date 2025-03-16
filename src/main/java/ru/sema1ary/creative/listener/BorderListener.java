@@ -22,12 +22,6 @@ public class BorderListener implements Listener {
     @EventHandler
     public void onPlayerMove(PlayerMoveEvent event) {
         Player player = event.getPlayer();
-        World world = player.getWorld();
-
-        WorldBorder worldBorder = world.getWorldBorder();
-        double borderSize = worldBorder.getSize() / 2;
-        Location center = worldBorder.getCenter();
-
         accept(player, player1 -> {
             Spawn spawn = (Spawn) Bukkit.getPluginManager().getPlugin("spawn");
             assert spawn != null;

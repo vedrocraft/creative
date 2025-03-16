@@ -1,0 +1,5 @@
+configuration:
+  reload-message: '<green>Плагин перезапущен.'
+
+  speed-change-message: '<green>Вы успешно изменили скорость!'
+  illegal-speed-message: '<red>Неверный формат скорости! (1-10)'
