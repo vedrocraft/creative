@@ -55,7 +55,12 @@ public class SpeedCommand {
 
     @SuppressWarnings("all")
     private boolean isSpeedValid(Player sender, int speed) {
-        PlayerUtil.sendMessage(sender, (String) configService.get("illegal-speed-message"));
-        return speed >= 1 && speed <= 10;
+
+        if(speed >= 1 && speed <= 10) {
+            PlayerUtil.sendMessage(sender, (String) configService.get("illegal-speed-message"));
+            return false;
+        }
+
+        return true;
     }
 }
