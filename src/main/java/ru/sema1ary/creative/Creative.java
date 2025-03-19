@@ -17,8 +17,6 @@ public final class Creative extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        saveDefaultConfig();
-
         ServiceManager.registerService(ConfigService.class, new ConfigServiceImpl(this));
 
         getServer().getPluginManager().registerEvents(new SpectatatorListener(), this);
